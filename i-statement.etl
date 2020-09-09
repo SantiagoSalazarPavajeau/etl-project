@@ -1,0 +1,9 @@
+require_relative 'common'
+
+api_key = IO.read('.financialmodelingprep')
+
+source CSVSource, filename: 'aapl_income_statement_annual.csv'
+
+add_years!
+
+limit ENV['LIMIT']
